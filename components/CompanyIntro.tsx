@@ -11,8 +11,8 @@ const brands = ["Aashirwad", "Sunrise", "Duralex", "Nandi Plus"];
 
 export default function CompanyIntro() {
   return (
-    <section className="container-page relative overflow-hidden  py-20 rounded-xl">
-      <div className="container mx-auto px-5">
+    <section className="container-page relative overflow-hidden pb-10 pt-20 rounded-xl">
+      <div className="container mx-auto px-4">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* Left Content */}
           <div>
@@ -77,30 +77,14 @@ export default function CompanyIntro() {
             </div>
           </div>
 
-          {/* Right Side */}
-          <div className="relative">
-            {/* Main Image */}
-            <div className="overflow-hidden rounded-3xl bg-white p-0 shadow-2xl">
-              <Image
-                src="/images/mansiPort.png"
-                alt="Mansi Plastic Water Tank"
-                width={700}
-                height={700}
-                className="mx-auto object-contain transition duration-500 hover:scale-105"
-              />
-            </div>
-
-            {/* Floating Card */}
-            <div className="absolute -left-5 top-8 rounded-2xl bg-white p-5 shadow-xl">
-              <p className="text-3xl font-bold text-primary">4</p>
-              <p className="text-sm text-gray-600">Trusted Brands</p>
-            </div>
-
-            {/* Floating Card */}
-            <div className="absolute -right-5 bottom-10 rounded-2xl bg-primary p-5 text-white shadow-xl">
-              <p className="text-3xl font-bold">15+</p>
-              <p className="text-sm">Years Warranty*</p>
-            </div>
+          <div className="overflow-hidden rounded-2xl bg-white p-0 mx-auto flex justify-center items-center">
+            <Image
+              src="/images/mansiPort.png"
+              alt="Mansi Plastic Water Tank"
+              width={700}
+              height={700}
+              className="object-cover transition duration-500 hover:scale-105"
+            />
           </div>
         </div>
       </div>

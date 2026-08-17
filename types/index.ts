@@ -5,6 +5,7 @@ export interface NavLink {
 
 export interface HeroSlide {
   image: string;
+  mobileImage: string;
   heading?: string;
   description?: string;
   ctaLabel?: string;

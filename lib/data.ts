@@ -18,6 +18,7 @@ export const navLinks: NavLink[] = [
 export const heroSlides: HeroSlide[] = [
   {
     image: "/images/heroslide.png",
+    mobileImage: "/images/heromobile.png",
   },
 ];
 

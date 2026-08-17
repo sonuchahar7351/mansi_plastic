@@ -10,13 +10,19 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import EnquiryForm from "@/components/EnquiryForm";
 import Footer from "@/components/Footer";
 import CompanyIntro from "@/components/CompanyIntro";
+import MobileHero from "@/components/MobileHero";
 
 export default function Home() {
   return (
     <>
       <Header isVisible={false} />
       <main>
-        <Hero />
+        <div className="sm:hidden">
+          <MobileHero />
+        </div>
+        <div className="hidden sm:block">
+          <Hero />
+        </div>
         <CompanyIntro />
         <About />
         <WhyChooseUs />

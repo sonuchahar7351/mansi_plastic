@@ -4,7 +4,7 @@ import { aboutSection } from "@/lib/data";
 
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="pt-10 pb-20 bg-white">
       <div className="container-page grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div className="relative order-2 lg:order-1">
           <div className="relative aspect-[5/4] w-full mx-auto lg:mx-0 rounded-lg overflow-hidden shadow-card ">
