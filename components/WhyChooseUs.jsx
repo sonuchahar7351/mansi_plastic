@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-4">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 mb-4">
         {features.map((feature) => {
           const Icon = feature.icon;
 

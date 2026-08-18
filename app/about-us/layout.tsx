@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Header isVisible={false} />
+      <Header isVisible={true} />
       <EnquiryModalProvider>
         {children}
         <EnquiryModal />

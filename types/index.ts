@@ -30,6 +30,8 @@ export interface ProductItem {
   CapiblityRange?: string[];
   Spacification?: string[];
   category?: string;
+  brands?: string[];
+  mobileFeaturesBanner?: string;
 }
 
 export interface StatItem {

@@ -6,45 +6,46 @@ import { ArrowRight } from "lucide-react";
 
 type Props = {
   params: Promise<{
-    category: string;
+    brand: string;
   }>;
 };
 
-const categories = {
-  "double-layer": "Double Layer",
-  "triple-layer": "Triple Layer",
-  "four-layer": "Four Layer",
+const brands = {
+  Ashirwad: "Ashirwad",
+  Sunrise: "Sunrise",
+  Duralex: "Duralex",
+  "Nandi-Plus": "Nandi-Plus",
 };
 
-export default async function CategoryPage({ params }: Props) {
-  const { category } = await params;
+export default async function BrandPage({ params }: Props) {
+  const { brand } = await params;
 
-  const categoryName = categories[category as keyof typeof categories];
+  const brandName = brands[brand as keyof typeof brands];
 
-  if (!categoryName) {
+  if (!brandName) {
     notFound();
   }
 
-  // Filter products belonging to this category
-  const categoryProducts = products.filter((product) =>
-    product.AvailableIn?.includes(categoryName),
+  // Filter products belonging to this brand
+  const brandProducts = products.filter((product) =>
+    product.brands?.includes(brandName),
   );
 
   return (
     <div className="container-page space-y-6 section-padding">
       <section className="space-y-2">
         <h1 className="text-3xl font-bold text-primary">
-          {categoryName} Water Tanks
+          {brandName} Water Tanks
         </h1>
 
         <p>
-          Explore our range of {categoryName.toLowerCase()} water tanks
-          available in multiple capacities.
+          Explore our range of {brandName.toLowerCase()} water tanks available
+          in multiple capacities.
         </p>
       </section>
 
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {categoryProducts.map((product) => (
+        {brandProducts.map((product) => (
           <Link
             href={`/${product.id}`}
             key={product.title}

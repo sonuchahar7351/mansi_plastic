@@ -13,6 +13,7 @@ export default function About() {
               alt="Mansi Plastic manufacturing facility"
               fill
               sizes="(max-width: 1024px) 90vw, 480px"
+              priority={true}
               className="object-cover"
             />
           </div>

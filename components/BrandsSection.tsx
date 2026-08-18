@@ -1,15 +1,19 @@
 import CustomSwiper from "@/shared/customCarousel";
-import { Shield, Sunrise, Droplets, Award, ArrowRight } from "lucide-react";
+import { Shield, Sunrise, Droplets, Award } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const brands = [
   {
     name: "Aashirwad",
+    href: "/products/Ashirwad",
     icon: Shield,
     description:
       "Reliable and economical water tanks designed for efficient water storage and daily household use.",
   },
   {
     name: "Sunrise",
+    href: "/products/Sunrise",
     icon: Sunrise,
     description:
       "Premium double-layer, triple-layer, and four-layer water tanks for residential and commercial applications.",
@@ -17,12 +21,14 @@ const brands = [
   },
   {
     name: "Duralex",
+    href: "/products/Duralex",
     icon: Award,
     description:
       "Strong and dependable tanks engineered for long-term durability and everyday water storage.",
   },
   {
     name: "Nandi Plus",
+    href: "/products/Nandi-Plus",
     icon: Droplets,
     description:
       "Quality water storage solutions available in multiple capacities for a wide range of installations.",
@@ -67,9 +73,10 @@ export default function BrandsSection() {
             const Icon = brand.icon;
 
             return (
-              <div
+              <Link
+                href={brand.href}
                 key={brand.name}
-                className={`group relative overflow-hidden rounded-2xl border bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
+                className={`group block relative overflow-hidden rounded-2xl border bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer ${
                   brand.featured
                     ? "border-primary shadow-lg"
                     : "border-gray-200"
@@ -92,7 +99,7 @@ export default function BrandsSection() {
                 <p className="relative mt-4 text-sm leading-7 text-gray-600">
                   {brand.description}
                 </p>
-              </div>
+              </Link>
             );
           })}
         </CustomSwiper>

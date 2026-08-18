@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <div className="">
             <Image
-              src="/images/mansi-logo-2.png"
+              src="/images/mansi-logo.png"
               alt="Mansi Plastic"
               width={200}
               height={100}

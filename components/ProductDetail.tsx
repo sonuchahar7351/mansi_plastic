@@ -20,29 +20,34 @@ const ProductDetail = ({ productId }: { productId: string }) => {
   }
 
   return (
-    <div>
-      <div className="relative w-full h-[600px] overflow-hidden">
-        <div
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10`}
-        >
-          <div
-            className={`absolute inset-0 animate-kenburns`}
-            style={{ animationDuration: `1500ms` }}
-          >
-            <Image
-              src={product.featuresBanner || product.image}
-              alt=""
-              fill
-              priority={true}
-              sizes="100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="absolute inset-0 flex gap-6 flex-col items-center justify-center z-20">
-            <h1 className="text-4xl font-bold text-white">{product.title}</h1>
-            <Breadcrumb tag={product.title} />
-          </div>
-          <div className="absolute inset-0 bg-black/50" />
+    <div className="pt-20">
+      <div className="relative w-full min-h-[600px] overflow-hidden">
+        <div className="block md:hidden">
+          <Image
+            src={
+              product.mobileFeaturesBanner ||
+              product.featuresBanner ||
+              product.image
+            }
+            alt=""
+            width={1080}
+            height={1400}
+            priority
+            sizes="100vw"
+            className="h-auto w-full object-contain"
+          />
+        </div>
+
+        <div className="hidden md:block">
+          <Image
+            src={product.featuresBanner || product.image}
+            alt=""
+            width={1800}
+            height={1080}
+            priority
+            sizes="100vw"
+            className="h-auto w-full object-contain"
+          />
         </div>
       </div>
       <div className="container-page grid grid-cols-1 md:grid-cols-3 my-8 gap-4">

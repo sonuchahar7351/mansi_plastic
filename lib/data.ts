@@ -1,7 +1,6 @@
 import {
   NavLink,
   HeroSlide,
-  LaunchedProduct,
   ProductItem,
   StatItem,
   Testimonial,
@@ -12,13 +11,14 @@ export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Career", href: "/career" },
+  { label: "Products", href: "/products" },
   { label: "Contact Us", href: "/contact-us" },
 ];
 
 export const heroSlides: HeroSlide[] = [
   {
-    image: "/images/heroslide.png",
-    mobileImage: "/images/heromobile.png",
+    image: "/images/heroslide2.png",
+    mobileImage: "/images/heromobile2.png",
   },
 ];
 
@@ -72,7 +72,9 @@ export const products: ProductItem[] = [
       "/images/verticalTank.png",
       "/images/verticalTank.png",
     ],
-    featuresBanner: "https://picsum.photos/seed/mansi-prod1/800/400",
+    featuresBanner: "/images/verticalfeature.png",
+    mobileFeaturesBanner: "/images/mobileverticalfeature.png",
+    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus"],
   },
   {
     id: "loft-tanks",
@@ -88,7 +90,9 @@ export const products: ProductItem[] = [
       "/images/loftTank.png",
       "/images/loftTank.png",
     ],
-    featuresBanner: "https://picsum.photos/seed/mansi-features/800/400",
+    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus"],
+    featuresBanner: "/images/loftfeature.png",
+    mobileFeaturesBanner: "/images/mobileloftfeature.png",
   },
   {
     id: "household-tanks",
@@ -102,7 +106,9 @@ export const products: ProductItem[] = [
       "/images/houseHoldTank.png",
       "/images/houseHoldTank.png",
     ],
-    featuresBanner: "/images/hoseholdbanner.png",
+    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus"],
+    featuresBanner: "/images/householdfeature.png",
+    mobileFeaturesBanner: "/images/mobilehouseholdfeature.png",
   },
 ];
 
@@ -178,7 +184,6 @@ export const aboutSection = {
   body: "Mansi Plastic has been manufacturing water storage tanks that combine durability, quality, and reliable performance. Our products are made using quality raw materials and modern manufacturing processes to ensure long service life and safe water storage. ",
   subBody:
     "We manufacture tanks suitable for residential, commercial, and industrial applications, with options available in double-layer, triple-layer, and four-layer construction.",
-  // image: "https://picsum.photos/seed/mansi-about/900/1000",
   image: "/images/about.png",
 
   highlights: [

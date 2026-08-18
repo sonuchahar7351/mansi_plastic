@@ -34,15 +34,28 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
         isSolid ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-20">
+      <div className="container-page flex items-center justify-between h-20 overflow-hidden">
         <Link href="/" className={``}>
-          <Image
-            src="/images/mansi-logo-2.png"
-            alt=""
-            width={160}
-            height={100}
-            // className="w-10 h-10"
-          />
+          <div className="hidden sm:block">
+            <Image
+              src="/images/mansi-logo.png"
+              alt=""
+              width={160}
+              height={100}
+              unoptimized={true}
+              quality={100}
+            />
+          </div>
+          <div className="block sm:hidden">
+            <Image
+              src="/images/mansi-logo.png"
+              alt=""
+              width={150}
+              height={100}
+              unoptimized={true}
+              quality={100}
+            />
+          </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -50,7 +63,7 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
             <div key={link.href} className="flex flex-col gap-1 group">
               <Link
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors duration-300 hover:text-accent ${
+                className={`relative text-base font-medium transition-colors duration-300 hover:text-accent ${
                   isSolid ? "text-body" : "text-white"
                 }`}
               >

@@ -8,7 +8,7 @@ export default function ProductList() {
   return (
     <section id="products" className="section-padding bg-section">
       <div className="container-page">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 my-4 mb-8">
+        <div className="flex flex-col  gap-4 my-4 mb-8">
           <div>
             <p className="eyebrow">Our Products</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold text-primary">
