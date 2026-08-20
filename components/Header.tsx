@@ -7,6 +7,8 @@ import { navLinks } from "@/lib/data";
 import { usePathname } from "next/navigation";
 import { useEnquiryModal } from "@/context/EnquiryForm";
 import Image from "next/image";
+import { DesktopNavItem } from "./navs/DesktopNav";
+import { MobileNavItem } from "./navs/MobileNav";
 
 export default function Header({ isVisible = true }: { isVisible?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +36,7 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
         isSolid ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container-page flex items-center justify-between h-20 overflow-hidden">
+      <div className="container-page flex items-center justify-between h-20">
         <Link href="/" className={``}>
           <div className="hidden sm:block">
             <Image
@@ -60,21 +62,7 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
 
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <div key={link.href} className="flex flex-col gap-1 group">
-              <Link
-                href={link.href}
-                className={`relative text-base font-medium transition-colors duration-300 hover:text-accent ${
-                  isSolid ? "text-body" : "text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
-              <span
-                className={`h-[2px] bg-accent transition-all duration-300 ${
-                  isSolid ? "bg-accent" : "bg-white"
-                } ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"}`}
-              />
-            </div>
+            <DesktopNavItem key={link.href} item={link} isSolid={isSolid} />
           ))}
         </nav>
 
@@ -102,20 +90,20 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
 
       {mobileOpen && (
         <nav className="lg:hidden bg-white border-t border-borderc">
-          <div className="container-page flex flex-col py-4 gap-1">
+          <div className="container-page flex flex-col py-2">
             {navLinks.map((link) => (
-              <Link
+              <MobileNavItem
                 key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="py-3 text-sm font-medium text-body border-b border-borderc last:border-b-0"
-              >
-                {link.label}
-              </Link>
+                item={link}
+                onNavigate={() => setMobileOpen(false)}
+              />
             ))}
             <button
-              onClick={() => openModal()}
-              className="mt-3 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-secondary"
+              onClick={() => {
+                openModal();
+                setMobileOpen(false);
+              }}
+              className="mt-3 mb-2 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-secondary"
             >
               Enquire Now
             </button>

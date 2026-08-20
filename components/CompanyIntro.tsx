@@ -57,24 +57,6 @@ export default function CompanyIntro() {
                 <span className="font-medium">Residential & Commercial</span>
               </div>
             </div>
-
-            {/* Brands */}
-            <div className="mt-10">
-              <h3 className="mb-4 text-lg font-semibold text-gray-900">
-                Our Brands
-              </h3>
-
-              <div className="flex flex-wrap gap-3">
-                {brands.map((brand) => (
-                  <span
-                    key={brand}
-                    className="rounded-full border border-primary/20 bg-primary/5 px-5 py-2 font-medium text-primary"
-                  >
-                    {brand}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className="overflow-hidden rounded-2xl bg-white p-0 mx-auto flex justify-center items-center">

@@ -11,7 +11,38 @@ export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Career", href: "/career" },
-  { label: "Products", href: "/products" },
+  {
+    label: "Products",
+    href: "/products",
+    subNav: [
+      {
+        label: "Mansi Plastic Household Tank",
+        href: "/products/mansi-plastic/household-tanks",
+      },
+      {
+        label: "Mansi Plastic Loft Tank",
+        href: "/products/mansi-plastic/loft-tanks",
+      },
+      {
+        label: "Mansi Plastic Vertical Tank",
+        href: "/products/mansi-plastic/vertical-water-storage-tanks",
+        // subNav: [
+        //   {
+        //     label: "500 Litre",
+        //     href: "/products/mansi-plastic/vertical-water-storage-tanks/500",
+        //   },
+        //   {
+        //     label: "1000 Litre",
+        //     href: "/products/mansi-plastic/vertical-water-storage-tanks/1000",
+        //   },
+        //   {
+        //     label: "1500 Litre",
+        //     href: "/products/mansi-plastic/vertical-water-storage-tanks/1500",
+        //   },
+        // ],
+      },
+    ],
+  },
   { label: "Contact Us", href: "/contact-us" },
 ];
 
@@ -74,7 +105,7 @@ export const products: ProductItem[] = [
     ],
     featuresBanner: "/images/verticalfeature.png",
     mobileFeaturesBanner: "/images/mobileverticalfeature.png",
-    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus"],
+    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus", "Mansi Plastic"],
   },
   {
     id: "loft-tanks",
