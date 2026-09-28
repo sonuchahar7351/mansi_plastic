@@ -3,7 +3,6 @@ import { EnquiryModalProvider } from "@/context/EnquiryForm";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export const metadata: Metadata = {
   title: "Careers at Mansi Plastic | Join Our Team in Hyderabad",
@@ -22,8 +21,6 @@ export default function RootLayout({
       <EnquiryModalProvider>
         {children}
         <EnquiryModal />
-
-        <AutoEnquiryTrigger delay={5000} />
       </EnquiryModalProvider>
       <Footer />
     </>

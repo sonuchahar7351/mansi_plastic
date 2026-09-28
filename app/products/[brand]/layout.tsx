@@ -1,7 +1,5 @@
 import EnquiryModal from "@/shared/EnquiryModal";
 import { EnquiryModalProvider } from "@/context/EnquiryForm";
-import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
-import type { Metadata } from "next";
 
 type Props = {
   children: React.ReactNode;
@@ -17,8 +15,6 @@ export default function BrandLayout({ children }: Props) {
         {children}
 
         <EnquiryModal />
-
-        <AutoEnquiryTrigger delay={5000} />
       </EnquiryModalProvider>
     </>
   );

@@ -11,6 +11,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 import Footer from "@/components/Footer";
 import CompanyIntro from "@/components/CompanyIntro";
 import MobileHero from "@/components/MobileHero";
+import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
         <BrandsSection />
         <Stats />
         <Testimonials />
-        <CompanyVideo />
+        {/* <CompanyVideo /> */}
         <EnquiryForm />
       </main>
       <Footer />

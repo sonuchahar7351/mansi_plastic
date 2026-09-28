@@ -1,7 +1,6 @@
 import EnquiryModal from "@/shared/EnquiryModal";
 import { EnquiryModalProvider } from "@/context/EnquiryForm";
 import type { Metadata } from "next";
-import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 import { ProductItem } from "@/types";
 import { products } from "@/lib/data";
 
@@ -47,7 +46,6 @@ export default function RootLayout({
       <EnquiryModalProvider>
         {children}
         <EnquiryModal />
-        <AutoEnquiryTrigger delay={5000} />
       </EnquiryModalProvider>
     </>
   );

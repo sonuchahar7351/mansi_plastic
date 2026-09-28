@@ -14,30 +14,6 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
-import { Montserrat } from "next/font/google";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
-import { Roboto } from "next/font/google";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  display: "swap",
-  weight: ["400", "500", "700"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
   title: "Water Tank Manufacturers in Hyderabad | Mansi Plastic",
   description:
@@ -55,7 +31,6 @@ export default function RootLayout({
         <EnquiryModalProvider>
           {children}
           <EnquiryModal />
-
           <AutoEnquiryTrigger delay={5000} />
         </EnquiryModalProvider>
       </body>
