@@ -40,7 +40,7 @@ export default function OurProducts() {
           >
             {products.map((product) => (
               <Link
-                href={`/${product.id}`}
+                href={`/product/${product.id}`}
                 key={product.title}
                 className="group rounded-lg bg-white border border-borderc shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover overflow-hidden flex flex-col cursor-pointer"
               >

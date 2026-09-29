@@ -1,19 +1,18 @@
 import CustomSwiper from "@/shared/customCarousel";
 import { Shield, Sunrise, Droplets, Award } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const brands = [
   {
     name: "Aashirwad",
-    href: "/products/Ashirwad",
+    href: "/aashirwad",
     icon: Shield,
     description:
       "Reliable and economical water tanks designed for efficient water storage and daily household use.",
   },
   {
     name: "Sunrise",
-    href: "/products/Sunrise",
+    href: "/sunrise",
     icon: Sunrise,
     description:
       "Premium double-layer, triple-layer, and four-layer water tanks for residential and commercial applications.",
@@ -21,14 +20,14 @@ const brands = [
   },
   {
     name: "Duralex",
-    href: "/products/Duralex",
+    href: "duralex",
     icon: Award,
     description:
       "Strong and dependable tanks engineered for long-term durability and everyday water storage.",
   },
   {
     name: "Nandi Plus",
-    href: "/products/Nandi-Plus",
+    href: "/nandhi-plus",
     icon: Droplets,
     description:
       "Quality water storage solutions available in multiple capacities for a wide range of installations.",

@@ -48,7 +48,7 @@ export default async function BrandPage({ params }: Props) {
         <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {brandProducts.map((product) => (
             <Link
-              href={`/${product.id}`}
+              href={`/products/${brand}/${product.id}`}
               key={product.title}
               className="group rounded-lg bg-white border border-borderc shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover overflow-hidden flex flex-col cursor-pointer"
             >
@@ -70,7 +70,7 @@ export default async function BrandPage({ params }: Props) {
                   {product.description}
                 </p>
                 <Link
-                  href={product.href}
+                  href={`/products/${brand}/${product.id}`}
                   className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-primary"
                 >
                   Learn More

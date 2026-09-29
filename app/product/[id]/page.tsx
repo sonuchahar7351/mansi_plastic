@@ -6,7 +6,7 @@ export default function Home({ params }: { params: { id: string } }) {
   const productId = params.id;
   return (
     <>
-      <Header isVisible={false} />
+      <Header isVisible={true} />
       <ProductDetail productId={productId} />
       <Footer />
     </>
