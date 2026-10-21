@@ -1,6 +1,6 @@
 const SPECS = [
   { label: "Color", value: "Blue" },
-  { label: "Brand:", value: "Agarwal Water Tank" },
+  { label: "Brand:", value: "Duralex, Nandhi Plus, Aashirwad, Sunrise" },
   { label: "Storage Capacity:", value: "300-5000 L" },
   { label: "Usage:", value: "Water Storage" },
   { label: "Material:", value: "LLDPE Virgin Plastic" },

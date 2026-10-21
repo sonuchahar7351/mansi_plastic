@@ -2,7 +2,6 @@ import EnquiryModal from "@/shared/EnquiryModal";
 import { EnquiryModalProvider } from "@/context/EnquiryForm";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Sitemap | Mansi Plastic",
@@ -18,11 +17,7 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      <EnquiryModalProvider>
-        {children}
-        <EnquiryModal />
-      </EnquiryModalProvider>
-      <Footer />
+      {children}
     </>
   );
 }

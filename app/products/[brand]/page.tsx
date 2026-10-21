@@ -14,7 +14,7 @@ const brands = {
   Ashirwad: "Ashirwad",
   Sunrise: "Sunrise",
   Duralex: "Duralex",
-  "Nandi-Plus": "Nandi-Plus",
+  "Nandhi-Plus": "Nandhi-Plus",
 };
 
 export default async function BrandPage({ params }: Props) {

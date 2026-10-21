@@ -7,7 +7,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-const brands = ["Aashirwad", "Sunrise", "Duralex", "Nandi Plus"];
+const brands = ["Aashirwad", "Sunrise", "Duralex", "Nandhi Plus"];
 
 export default function CompanyIntro() {
   return (

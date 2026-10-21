@@ -26,7 +26,7 @@ const brands = [
       "Strong and dependable tanks engineered for long-term durability and everyday water storage.",
   },
   {
-    name: "Nandi Plus",
+    name: "Nandhi Plus",
     href: "/nandhi-plus",
     icon: Droplets,
     description:

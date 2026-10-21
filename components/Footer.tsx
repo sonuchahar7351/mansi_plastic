@@ -31,7 +31,7 @@ export default function Footer() {
             />
           </div>
           <p className="mt-4 text-sm text-body/80 leading-relaxed max-w-sm">
-            Manufacturers of Sunrise, Duralex, Nandi Plus & Aashirwad water
+            Manufacturers of Sunrise, Duralex, Nandhi Plus & Aashirwad water
             storage tanks.
             <br />
             Reliable water storage. Durable quality. Trusted performance.

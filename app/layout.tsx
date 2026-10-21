@@ -6,6 +6,7 @@ import EnquiryModal from "@/shared/EnquiryModal";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 import { Poppins } from "next/font/google";
+import WhatsAppFloat from "@/components/Whatsappfloat";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           {children}
           <EnquiryModal />
           <AutoEnquiryTrigger delay={5000} />
+          <WhatsAppFloat />
         </EnquiryModalProvider>
       </body>
     </html>

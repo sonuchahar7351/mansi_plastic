@@ -105,7 +105,7 @@ export const products: ProductItem[] = [
     ],
     featuresBanner: "/images/verticalfeature.png",
     mobileFeaturesBanner: "/images/mobileverticalfeature.png",
-    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus", "Mansi Plastic"],
+    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandhi-Plus", "Mansi Plastic"],
   },
   {
     id: "loft-tanks",
@@ -121,7 +121,7 @@ export const products: ProductItem[] = [
       "/images/loftTank.png",
       "/images/loftTank.png",
     ],
-    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus"],
+    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandhi-Plus"],
     featuresBanner: "/images/loftfeature.png",
     mobileFeaturesBanner: "/images/mobileloftfeature.png",
   },
@@ -137,7 +137,7 @@ export const products: ProductItem[] = [
       "/images/houseHoldTank.png",
       "/images/houseHoldTank.png",
     ],
-    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandi-Plus"],
+    brands: ["Aashirwad", "Sunrise", "Duralex", "Nandhi-Plus"],
     featuresBanner: "/images/householdfeature.png",
     mobileFeaturesBanner: "/images/mobilehouseholdfeature.png",
   },
@@ -196,7 +196,7 @@ export const footerLinks = [
 ];
 
 export const contactDetails = {
-  email: "info@mansiplastic.com",
+  email: "anjali@grank.co.in & alankritha@grank.co.in",
   phone: "+91 92465 48874",
   officeAddress:
     "H. No. 10-1-670/1/B, A.C. Guards, Near Rock Memorial High School, Khairatabad, Hyderabad – 500004",
