@@ -73,7 +73,7 @@ export const aboutTabs: AboutTab[] = [
 export const products: any[] = [
   {
     id: "AASHIRWAD-Water-Tanks",
-    image: "/ashirwad/ashirwad.jpg",
+    image: "/ashirwad/ashirwad.JPG",
     title: "AASHIRWAD Water Tanks",
     description:
       "AASHIRWAD, a trusted water tank brand from Mansi Plastic, offers dependable water storage solutions designed for everyday residential and commercial requirements. The tanks are built with a focus on durability, strength, hygiene, and long-term performance. Manufactured using high-quality LLDPE (Linear Low-Density Polyethylene) virgin material, AASHIRWAD water tanks ensure superior strength, crack resistance, and safe water storage. AASHIRWAD water tanks are suitable for storing water safely while providing a practical solution for homes, buildings, and other applications.",
@@ -92,10 +92,10 @@ export const products: any[] = [
       "10000L",
     ],
     banners: [
-      "/ashirwad/ashirwad.jpg",
-      "/ashirwad/ashirwad1.jpg",
-      "/ashirwad/ashirwad2.jpg",
-      "/ashirwad/ashirwad3.jpg",
+      "/ashirwad/ashirwad.JPG",
+      "/ashirwad/ashirwad1.JPG",
+      "/ashirwad/ashirwad2.JPG",
+      "/ashirwad/ashirwad3.JPG",
     ],
     key_features: [
       "Manufactured using LLDPE virgin material for enhanced durability and hygiene",
@@ -115,7 +115,7 @@ export const products: any[] = [
   },
   {
     id: "DURALEX-Water-Tanks",
-    image: "/duralax/duralax.jpg",
+    image: "/duralax/duralax.JPG",
     title: "DURALEX Water Tanks",
     description:
       "DURALEX, from Mansi Plastic, is designed to provide reliable and efficient water storage for modern requirements. The brand focuses on combining quality materials with a strong construction to deliver water tanks that can withstand regular usage and changing environmental conditions. Made from LLDPE (Linear Low-Density Polyethylene) virgin material, DURALEX water tanks offer excellent strength, flexibility, and resistance to cracking, ensuring long-lasting and safe water storage. DURALEX water tanks are a practical choice for homes, commercial spaces, and other water storage needs.",
@@ -134,10 +134,10 @@ export const products: any[] = [
       "10000L",
     ],
     banners: [
-      "/duralax/duralax.jpg",
-      "/duralax/duralax1.jpg",
-      "/duralax/duralax2.jpg",
-      "/duralax/duralax3.jpg",
+      "/duralax/duralax.JPG",
+      "/duralax/duralax1.JPG",
+      "/duralax/duralax2.JPG",
+      "/duralax/duralax3.JPG",
     ],
     key_features: [
       "Strong and durable body construction",
@@ -158,7 +158,7 @@ export const products: any[] = [
   },
   {
     id: "NANDHIPLUS-Water-Tanks",
-    image: "/nandhi/nandhi.jpg",
+    image: "/nandhi/nandhi.JPG",
     title: "NANDHI PLUS Water Tanks",
     description:
       "NANDHI PLUS is another reliable water storage brand offered by Mansi Plastic, developed to meet the everyday needs of customers looking for durable and economical water storage solutions. With an emphasis on quality and functionality, the tanks suit a variety of applications. Manufactured using LLDPE virgin material, they deliver enhanced strength, crack resistance, and hygienic water storage. Their robust construction makes them a practical option for dependable water storage.",
@@ -177,10 +177,10 @@ export const products: any[] = [
       "10000L",
     ],
     banners: [
-      "/nandhi/nandhi.jpg",
-      "/nandhi/nandhi1.jpg",
-      "/nandhi/nandhi2.jpg",
-      "/nandhi/nandhi3.jpg",
+      "/nandhi/nandhi.JPG",
+      "/nandhi/nandhi1.JPG",
+      "/nandhi/nandhi2.JPG",
+      "/nandhi/nandhi3.JPG",
     ],
     key_features: [
       "Designed for durable and consistent performance",
@@ -202,7 +202,7 @@ export const products: any[] = [
   },
   {
     id: "SUNRISE-Water-Tanks",
-    image: "/sunrise/sunrise.jpg",
+    image: "/sunrise/sunrise.JPG",
     title: "SUNRISE Water Tanks",
     description:
       "SUNRISE, from Mansi Plastic, is a dependable water storage brand crafted to meet the everyday needs of homes, commercial spaces, and other applications. Manufactured using LLDPE (Linear Low-Density Polyethylene) virgin material, SUNRISE water tanks offer excellent strength, crack resistance, and hygienic water storage, ensuring long-lasting and safe performance. With a focus on durability and practicality, these tanks are designed to withstand regular usage and changing environmental conditions, making them a reliable choice for dependable water storage.",
@@ -221,10 +221,10 @@ export const products: any[] = [
       "10000L",
     ],
     banners: [
-      "/sunrise/sunrise.jpg",
-      "/sunrise/sunrise1.jpg",
-      "/sunrise/sunrise2.jpg",
-      "/sunrise/sunrise3.jpg",
+      "/sunrise/sunrise.JPG",
+      "/sunrise/sunrise1.JPG",
+      "/sunrise/sunrise2.JPG",
+      "/sunrise/sunrise3.JPG",
     ],
     key_features: [
       "Manufactured using LLDPE virgin material for superior strength and hygiene",
