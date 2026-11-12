@@ -19,8 +19,8 @@ export default function ProductInfo({
   product,
   priceLabel = "Per Liter",
   category = "Mansi Plastic Water Tanks",
-  categoryHref = "#",
-  contactHref = "#contact",
+  categoryHref = "/products",
+  contactHref = "/contact-us",
 }: Props) {
   const brand = getBrandName(product.title);
   const sizes = joinList(product.CapiblityRange);
