@@ -3,7 +3,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { products } from "@/lib/data";
 
-export default function CategoryProductList() {
+export default function CategoryProductList({ productId }: any) {
+  const filterProduct = products.filter((p) => p.id !== productId);
   return (
     <section className="py-4">
       <h2 className="my-6 text-3xl md:text-3xl font-bold text-primary">
@@ -11,7 +12,7 @@ export default function CategoryProductList() {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {products.map((product) => (
+        {filterProduct.map((product) => (
           <Link
             href={`/${product.id}`}
             key={product.title}

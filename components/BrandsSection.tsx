@@ -1,18 +1,15 @@
 import CustomSwiper from "@/shared/customCarousel";
 import { Shield, Sunrise, Droplets, Award } from "lucide-react";
-import Link from "next/link";
 
 const brands = [
   {
     name: "Aashirwad",
-    href: "/aashirwad",
     icon: Shield,
     description:
       "Reliable and economical water tanks designed for efficient water storage and daily household use.",
   },
   {
     name: "Sunrise",
-    href: "/sunrise",
     icon: Sunrise,
     description:
       "Premium double-layer, triple-layer, and four-layer water tanks for residential and commercial applications.",
@@ -20,14 +17,12 @@ const brands = [
   },
   {
     name: "Duralex",
-    href: "duralex",
     icon: Award,
     description:
       "Strong and dependable tanks engineered for long-term durability and everyday water storage.",
   },
   {
     name: "Nandhi Plus",
-    href: "/nandhi-plus",
     icon: Droplets,
     description:
       "Quality water storage solutions available in multiple capacities for a wide range of installations.",
@@ -72,8 +67,7 @@ export default function BrandsSection() {
             const Icon = brand.icon;
 
             return (
-              <Link
-                href={brand.href}
+              <div
                 key={brand.name}
                 className={`group block relative overflow-hidden rounded-2xl border bg-white p-7 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl cursor-pointer ${
                   brand.featured
@@ -98,7 +92,7 @@ export default function BrandsSection() {
                 <p className="relative mt-4 text-sm leading-7 text-gray-600">
                   {brand.description}
                 </p>
-              </Link>
+              </div>
             );
           })}
         </CustomSwiper>

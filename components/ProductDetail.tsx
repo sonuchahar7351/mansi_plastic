@@ -9,7 +9,7 @@ import AdditionalInfo from "./ProductAdditionalDetail";
 import WaterTankDimension from "./WaterTankDimension";
 import ProductEnquiryForm from "./ProductEnquiryForm";
 
-export default function ProductPage({ productId, brand }: any) {
+export default function ProductPage({ productId }: any) {
   const product: ProductItem | undefined = products.find(
     (p) => p.id === productId,
   );
@@ -38,7 +38,7 @@ export default function ProductPage({ productId, brand }: any) {
         />
       </div>
 
-      <CategoryProductList />
+      <CategoryProductList productId={productId} />
     </div>
   );
 }

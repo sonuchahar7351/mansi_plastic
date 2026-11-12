@@ -40,9 +40,9 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
         <Link href="/" className={``}>
           <div className="hidden sm:block">
             <Image
-              src="/images/mansi-logo.png"
+              src="/images/mansiLogo2.jpg"
               alt=""
-              width={160}
+              width={80}
               height={100}
               unoptimized={true}
               quality={100}
@@ -50,9 +50,9 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
           </div>
           <div className="block sm:hidden">
             <Image
-              src="/images/mansi-logo.png"
+              src="/images/mansiLogo2.jpg"
               alt=""
-              width={150}
+              width={60}
               height={100}
               unoptimized={true}
               quality={100}

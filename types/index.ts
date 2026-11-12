@@ -27,6 +27,7 @@ export interface ProductItem {
   href: string;
   banners?: string[];
   featuresBanner?: string;
+  Colors?: string[];
   AvailableIn?: string[];
   CapiblityRange?: string[];
   Spacification?: string[];

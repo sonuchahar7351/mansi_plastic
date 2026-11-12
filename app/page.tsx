@@ -4,14 +4,12 @@ import About from "@/components/About";
 import Stats from "@/components/Stats";
 import OurProducts from "@/components/OurProducts";
 import Testimonials from "@/components/Testimonials";
-import CompanyVideo from "@/components/CompanyVideo";
 import BrandsSection from "@/components/BrandsSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import EnquiryForm from "@/components/EnquiryForm";
 import Footer from "@/components/Footer";
 import CompanyIntro from "@/components/CompanyIntro";
 import MobileHero from "@/components/MobileHero";
-import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export default function Home() {
   return (
@@ -31,7 +29,6 @@ export default function Home() {
         <BrandsSection />
         <Stats />
         <Testimonials />
-        {/* <CompanyVideo /> */}
         <EnquiryForm />
       </main>
       <Footer />
