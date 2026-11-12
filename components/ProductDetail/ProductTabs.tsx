@@ -4,11 +4,12 @@ import { useState } from "react";
 
 const TABS = [
   { id: "description", label: "Description" },
+  { id: "features", label: "Key Features" },
+  { id: "colours", label: "Colours" },
+  { id: "layers", label: "Layers Bifurcation" },
   { id: "additional", label: "Additional Information" },
   { id: "dimension", label: "Water Tank Dimension" },
   { id: "enquiry", label: "Send Enquiry" },
-  { id: "layers", label: "Layers Bifurcation" },
-  { id: "reviews", label: "Reviews (0)" },
 ];
 
 export default function ProductTabs({
@@ -21,15 +22,17 @@ export default function ProductTabs({
   const current = activeTab ?? internalTab;
   const setTab = onTabChange ?? setInternalTab;
 
+  // Only show tabs that actually have content
+  const visibleTabs = TABS.filter((t) => panels[t.id]);
+
   return (
     <div className="w-full">
-      {/* Tab bar */}
       <div
         role="tablist"
         aria-label="Product information tabs"
         className="flex flex-wrap border-b border-gray-200 gap-2"
       >
-        {TABS.map((tab) => {
+        {visibleTabs.map((tab) => {
           const isActive = tab.id === current;
           return (
             <button
@@ -53,7 +56,6 @@ export default function ProductTabs({
         })}
       </div>
 
-      {/* Tab panel */}
       <div
         role="tabpanel"
         id={`panel-${current}`}

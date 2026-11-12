@@ -8,8 +8,11 @@ import CategoryProductList from "./CategoryProductList";
 import AdditionalInfo from "./ProductAdditionalDetail";
 import WaterTankDimension from "./WaterTankDimension";
 import ProductEnquiryForm from "./ProductEnquiryForm";
+import KeyFeatures from "./KeyFeatures";
+import ProductColors from "./ProductColors";
+import LayersBifurcation from "./LayersBifurcation";
 
-export default function ProductPage({ productId }: any) {
+export default function ProductPage({ productId }: { productId: string }) {
   const product: ProductItem | undefined = products.find(
     (p) => p.id === productId,
   );
@@ -23,16 +26,18 @@ export default function ProductPage({ productId }: any) {
           images={product.banners || []}
           mainAlt={product.title}
         />
-        <ProductInfo title={product.title} />
+        <ProductInfo product={product} />
       </div>
 
-      {/* Tabs + Description */}
       <div className="mt-12">
         <ProductTabs
           panels={{
-            description: <FeaturesTable />,
-            additional: <AdditionalInfo />,
-            dimension: <WaterTankDimension />,
+            description: <FeaturesTable product={product} />,
+            features: <KeyFeatures product={product} />,
+            colours: <ProductColors product={product} />,
+            layers: <LayersBifurcation product={product} />,
+            additional: <AdditionalInfo product={product} />,
+            dimension: <WaterTankDimension product={product} />,
             enquiry: <ProductEnquiryForm />,
           }}
         />

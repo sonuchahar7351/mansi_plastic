@@ -1,3 +1,6 @@
+import type { ProductItem } from "@/types";
+import { parseCapacity } from "@/lib/ProductUtils";
+
 const COLUMNS = [
   "S.No",
   "Capacity (Liters)",
@@ -6,18 +9,30 @@ const COLUMNS = [
   "Manhole Dia (Inch)",
 ];
 
-const ROWS = [
-  [1, 300, 29, 31.5, 16],
-  [2, 500, 34, 37, 16],
-  [3, 750, 39, 43.5, 16],
-  [4, 1000, 42, 48, 16],
-  [5, 1500, 49, 54.5, 16],
-  [6, 2000, 53, 60, 16],
-  [7, 3000, 58, 73.5, 16],
-  [8, 5000, 74, 83.5, 16],
-];
+// capacity (L) -> [diameter, height, manhole]
+const DIMENSIONS: Record<number, [number, number, number]> = {
+  300: [29, 31.5, 16],
+  500: [34, 37, 16],
+  750: [39, 43.5, 16],
+  1000: [42, 48, 16],
+  1500: [49, 54.5, 16],
+  2000: [53, 60, 16],
+  3000: [58, 73.5, 16],
+  5000: [74, 83.5, 16],
+  // 10000L: add [diameter, height, manhole] here when available
+};
 
-export default function WaterTankDimension() {
+export default function WaterTankDimension({
+  product,
+}: {
+  product: ProductItem;
+}) {
+  const rows = (product.CapiblityRange ?? []).map((size: string, i: number) => {
+    const cap = parseCapacity(size);
+    const d = DIMENSIONS[cap];
+    return [i + 1, cap, ...(d ?? ["On request", "On request", "On request"])];
+  });
+
   return (
     <section aria-labelledby="dimension-heading" className="w-full">
       <h2
@@ -33,7 +48,7 @@ export default function WaterTankDimension() {
       <div className="overflow-x-auto rounded-md border border-gray-200">
         <table className="w-full min-w-[560px] border-collapse text-sm">
           <caption className="sr-only">
-            Water tank capacity and dimensions
+            {product.title} capacity and dimensions
           </caption>
           <thead>
             <tr className="bg-sky-100">
@@ -49,9 +64,9 @@ export default function WaterTankDimension() {
             </tr>
           </thead>
           <tbody>
-            {ROWS.map((row, i) => (
+            {rows.map((row, i) => (
               <tr
-                key={row[0]}
+                key={String(row[1])}
                 className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
               >
                 {row.map((cell, j) => (

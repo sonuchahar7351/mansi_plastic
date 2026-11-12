@@ -27,13 +27,15 @@ export interface ProductItem {
   href: string;
   banners?: string[];
   featuresBanner?: string;
-  Colors?: string[];
+  colors?: string[];
   AvailableIn?: string[];
   CapiblityRange?: string[];
   Spacification?: string[];
   category?: string;
   brands?: string[];
   mobileFeaturesBanner?: string;
+  layers_by_colour?: Record<string, string[]>;
+  key_features: string[];
 }
 
 export interface StatItem {
