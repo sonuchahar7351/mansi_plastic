@@ -9,30 +9,20 @@ export const navLinks: NavLink[] = [
     href: "/products",
     subNav: [
       {
-        label: "Mansi Plastic Household Tank",
-        href: "/products/mansi-plastic/household-tanks",
+        label: "Ashirwad Water Storage Tank",
+        href: "/product/AASHIRWAD-Water-Tanks",
       },
       {
-        label: "Mansi Plastic Loft Tank",
-        href: "/products/mansi-plastic/loft-tanks",
+        label: "DURALEX Water Tanks",
+        href: "/product/DURALEX-Water-Tanks",
       },
       {
-        label: "Mansi Plastic Vertical Tank",
-        href: "/products/mansi-plastic/vertical-water-storage-tanks",
-        // subNav: [
-        //   {
-        //     label: "500 Litre",
-        //     href: "/products/mansi-plastic/vertical-water-storage-tanks/500",
-        //   },
-        //   {
-        //     label: "1000 Litre",
-        //     href: "/products/mansi-plastic/vertical-water-storage-tanks/1000",
-        //   },
-        //   {
-        //     label: "1500 Litre",
-        //     href: "/products/mansi-plastic/vertical-water-storage-tanks/1500",
-        //   },
-        // ],
+        label: "NANDHIPLUS Water Tanks",
+        href: "/product/NANDHIPLUS-Water-Tanks",
+      },
+      {
+        label: "SUNRISE Water Tanks",
+        href: "/product/SUNRISE-Water-Tanks",
       },
     ],
   },
@@ -77,7 +67,7 @@ export const products: any[] = [
     title: "AASHIRWAD Water Tanks",
     description:
       "AASHIRWAD, a trusted water tank brand from Mansi Plastic, offers dependable water storage solutions designed for everyday residential and commercial requirements. The tanks are built with a focus on durability, strength, hygiene, and long-term performance. Manufactured using high-quality LLDPE (Linear Low-Density Polyethylene) virgin material, AASHIRWAD water tanks ensure superior strength, crack resistance, and safe water storage. AASHIRWAD water tanks are suitable for storing water safely while providing a practical solution for homes, buildings, and other applications.",
-    href: "/products/AASHIRWAD-Water-Tanks",
+    href: "/product/AASHIRWAD-Water-Tanks",
     Spacification: ["UV Stabilized", "Food Grade", "Durable Construction"],
     AvailableIn: ["2 Layer", "3 Layer", "4 Layer", "5 Layer"],
     CapiblityRange: [
@@ -162,7 +152,7 @@ export const products: any[] = [
     title: "NANDHI PLUS Water Tanks",
     description:
       "NANDHI PLUS is another reliable water storage brand offered by Mansi Plastic, developed to meet the everyday needs of customers looking for durable and economical water storage solutions. With an emphasis on quality and functionality, the tanks suit a variety of applications. Manufactured using LLDPE virgin material, they deliver enhanced strength, crack resistance, and hygienic water storage. Their robust construction makes them a practical option for dependable water storage.",
-    href: "/products/AASHIRWAD-Water-Tanks",
+    href: "/product/NANDHIPLUS-Water-Tanks",
     Spacification: ["UV Stabilized", "Food Grade", "Durable Construction"],
     AvailableIn: ["2 Layer", "3 Layer", "4 Layer", "5 Layer"],
     CapiblityRange: [
