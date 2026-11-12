@@ -6,9 +6,10 @@ import { useRouter } from "next/navigation";
 import emailjs from "@emailjs/browser";
 
 const PRODUCTS = [
-  "Loft Tanks",
-  "Vertical Water Storage Tanks",
-  "Household Tanks",
+  "AASHIRWAD Water Tanks",
+  "DURALEX Water Tanks",
+  "NANDHIPLUS Water Tanks",
+  "SUNRISE Water Tanks",
 ];
 
 interface FormState {
