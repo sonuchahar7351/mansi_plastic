@@ -291,7 +291,7 @@ export const footerLinks = [
 ];
 
 export const contactDetails = {
-  email: "anjali@grank.co.in & alankritha@grank.co.in",
+  email: "giridharisinght@yahoo.com",
   phone: "+91 92465 48874",
   officeAddress:
     "H. No. 10-1-670/1/B, A.C. Guards, Near Rock Memorial High School, Khairatabad, Hyderabad – 500004",
