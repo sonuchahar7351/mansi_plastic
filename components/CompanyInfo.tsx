@@ -245,8 +245,8 @@ export default function CompanyInformation() {
           <div className="mx-auto w-full max-w-[280px]">
             <div className="relative aspect-square overflow-hidden rounded-2xl bg-gray-100">
               <Image
-                src="/images/ceo-placeholder.jpg"
-                alt="Rajesh Sharma - Founder and CEO"
+                src="/images/girdhariSingh.JPG"
+                alt="Thakur Giridhari Singh - Founder and CEO"
                 fill
                 className="object-cover"
               />
