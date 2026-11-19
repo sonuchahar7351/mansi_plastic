@@ -154,8 +154,8 @@ export default function CompanyInformation() {
                 </h3>
 
                 <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-gray-600">
-                  Replace this area with an image of your manufacturing
-                  facility, production line or factory.
+                  {/* Replace this area with an image of your manufacturing
+                  facility, production line or factory. */}
                 </p>
               </div>
             </div>
@@ -247,7 +247,8 @@ export default function CompanyInformation() {
               <Image
                 src="/images/girdhariSingh.JPG"
                 alt="Thakur Giridhari Singh - Founder and CEO"
-                fill
+                width={280}
+                height={280}
                 className="object-cover"
               />
             </div>
