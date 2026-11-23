@@ -275,7 +275,7 @@ export default function EnquiryForm() {
               type="submit"
               className="mt-8 inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-secondary"
             >
-              Submit Enquiry
+              {submitted ? "Submitting..." : "Submit Enquiry"}
             </button>
           </form>
         </div>
