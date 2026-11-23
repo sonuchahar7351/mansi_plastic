@@ -23,11 +23,12 @@ export default function Footer() {
         <div className="md:col-span-2">
           <div className="">
             <Image
-              src="/images/mansi-logo.png"
-              alt="Mansi Plastic"
-              width={200}
+              src="/images/mansiLogo2.jpg"
+              alt=""
+              width={80}
               height={100}
-              // className="w-10 h-10"
+              unoptimized={true}
+              quality={100}
             />
           </div>
           <p className="mt-4 text-sm text-body/80 leading-relaxed max-w-sm">

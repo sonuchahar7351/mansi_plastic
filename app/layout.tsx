@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { EnquiryModalProvider } from "@/context/EnquiryForm";
 import EnquiryModal from "@/shared/EnquiryModal";

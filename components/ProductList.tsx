@@ -53,7 +53,7 @@ export default function ProductList() {
                   {product.description}
                 </p>
                 <Link
-                  href={`/product/${product.href}`}
+                  href={`${product.href}`}
                   className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-primary"
                 >
                   Learn More

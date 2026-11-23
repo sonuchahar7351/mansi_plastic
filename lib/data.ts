@@ -283,10 +283,10 @@ export const productOptions = [
 ];
 
 export const footerLinks = [
-  { label: "About Us", href: "/about" },
+  { label: "About Us", href: "/about-us" },
   { label: "Products", href: "/products" },
   { label: "Career", href: "/career" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact Us", href: "/contact-us" },
   { label: "Sitemap", href: "/sitemap" },
 ];
 
