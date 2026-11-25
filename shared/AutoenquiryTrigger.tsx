@@ -2,6 +2,7 @@
 
 import { useEnquiryModal } from "@/context/EnquiryForm";
 import { useDelayedCallbackOnRouteChange } from "@/hooks/UseDelayedModel";
+import { usePathname } from "next/navigation";
 
 interface AutoEnquiryTriggerProps {
   /** Delay before auto-opening, in ms. Defaults to 5000 (5s). */
@@ -20,6 +21,10 @@ export default function AutoEnquiryTrigger({
   enabled = true,
 }: AutoEnquiryTriggerProps) {
   const { openModal, isOpen } = useEnquiryModal();
+  const pathname = usePathname();
+
+  // Never auto-open on the thank-you page.
+  const shouldEnable = enabled && pathname !== "/thank-you";
 
   useDelayedCallbackOnRouteChange(
     () => {
@@ -28,7 +33,7 @@ export default function AutoEnquiryTrigger({
       if (!isOpen) openModal();
     },
     delay,
-    enabled,
+    shouldEnable,
   );
 
   return null;
