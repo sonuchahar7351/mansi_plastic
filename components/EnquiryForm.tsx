@@ -4,7 +4,6 @@ import { FormEvent, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { productOptions } from "@/lib/data";
 import { useRouter } from "next/navigation";
-import emailjs from "@emailjs/browser";
 
 interface FormState {
   name: string;
@@ -68,24 +67,16 @@ export default function EnquiryForm() {
     if (Object.keys(nextErrors).length > 0) return;
     setSubmitted(true);
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          name: form.name,
-          company: form.company || "-",
-          email: form.email,
-          phone: form.phone,
-          product: form.product,
-          message: form.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
-      );
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
+      if (!res.ok) return;
       setForm(initialState);
       router.push("/thank-you");
     } catch (err) {
-      console.error("EmailJS error:", err);
       setSubmitted(false);
     } finally {
       setSubmitted(false);

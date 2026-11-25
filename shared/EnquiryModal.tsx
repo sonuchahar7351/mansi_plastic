@@ -3,7 +3,6 @@
 import { useEnquiryModal } from "@/context/EnquiryForm";
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import emailjs from "@emailjs/browser";
 
 const PRODUCTS = [
   "AASHIRWAD Water Tanks",
@@ -55,7 +54,7 @@ export default function EnquiryModal() {
     } else if (!/^[0-9+\-\s()]{7,}$/.test(values.phone)) {
       next.phone = "Please enter a valid phone number.";
     }
-    if (!values.product) next.product = "Please select a product.";
+    // if (!values.product) next.product = "Please select a product.";
     if (!values.message.trim()) next.message = "Please add a short message.";
     return next;
   };
@@ -77,27 +76,13 @@ export default function EnquiryModal() {
 
     setSubmitted(true);
     try {
-      const formData = new FormData();
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-      formData.append("name", form.name);
-      formData.append("email", form.email);
-      formData.append("phone", form.phone);
-      formData.append("company", form.company);
-      formData.append("product", form.product);
-      formData.append("message", form.message);
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          name: form.name,
-          company: form.company || "-",
-          email: form.email,
-          phone: form.phone,
-          product: form.product,
-          message: form.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
-      );
+      if (!res.ok) return;
 
       setForm(initialState);
       router.push("/thank-you");
